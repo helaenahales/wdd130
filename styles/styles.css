@@ -1,3 +1,11 @@
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation */
 nav {
     background-color: steelblue;
     padding: 10px;
@@ -9,43 +17,65 @@ nav a {
     display: block;
 }
 
-h1 {
-    color: steelblue;
-}
-
+/* Main */
 main {
     max-width: 840px;
 }
 
+h1 {
+    color: steelblue;
+}
+
+/* Profile Image */
 main img {
     width: 150px;
     height: auto;
+    float: right;
+    margin: 0 0 1rem 1rem;
     border: 1px solid #000;
     padding: 5px;
     box-shadow: 0 0 10px gray;
 }
 
-aside {
-    width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgb(0 0 0 / 0.2);
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
-    text-align: center;
+/* Paragraph */
+p {
+    padding: 0;
 }
 
+/* Aside */
+aside {
+    width: 20rem;
+    text-align: center;
+    position: relative;
+}
+
+/* Aside Image */
 aside img {
     width: 200px;
     height: auto;
 }
 
-p {
-    padding: 0;
+/* Overlay Heading */
+aside h2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255 255 255 / 0.7);
+    padding: 5px;
 }
 
+/* Footer */
 footer {
     margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
+}
+
+/* Class Selectors */
+.box {
+    margin: 1rem;
+    border: 1px solid rgba(0 0 0 / 0.2);
+    padding: 1rem;
+    background-color: #eee;
+    color: #333;
 }
