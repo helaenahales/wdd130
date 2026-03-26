@@ -19,6 +19,8 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    background-color: var(--accent2-color);
+    /* ✅ FIX: now using accent2 */
 }
 
 /* Layout */
@@ -94,6 +96,8 @@ nav a {
     left: 20px;
     right: 20px;
     background-color: rgba(255, 255, 255, 0.85);
+    border-left: 5px solid var(--primary-color);
+    /* small design upgrade */
 }
 
 /* Article Image */
@@ -101,6 +105,13 @@ nav a {
     float: right;
     width: 125px;
     margin: 5px;
+    border-radius: 5px;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    border-radius: 5px;
 }
 
 /* Footer */
@@ -110,7 +121,7 @@ footer {
     border-top: 1px solid #000;
 }
 
-/* Social Media (FIXED SIZE ICONS) */
+/* Social Media */
 .socialmedia a {
     text-decoration: none;
     margin: 0 5px;
