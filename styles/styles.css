@@ -5,25 +5,45 @@
     box-sizing: border-box;
 }
 
-/* Navigation */
+/* Layout Width */
+header,
+.grid,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+/* Navigation (FLEXBOX) */
 nav {
     background-color: steelblue;
-    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav a {
     color: white;
     padding: 10px;
+    text-decoration: none;
     display: block;
+}
+
+/* Heading */
+h1 {
+    color: steelblue;
+    border-bottom: 2px solid steelblue;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
 }
 
 /* Main */
 main {
-    max-width: 840px;
-}
-
-h1 {
-    color: steelblue;
+    grid-column: 2;
+    padding: 10px;
 }
 
 /* Profile Image */
@@ -37,13 +57,9 @@ main img {
     box-shadow: 0 0 10px gray;
 }
 
-/* Paragraph */
-p {
-    padding: 0;
-}
-
 /* Aside */
 aside {
+    grid-row: 1;
     width: 20rem;
     text-align: center;
     position: relative;
