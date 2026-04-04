@@ -22,7 +22,7 @@ body {
     background-color: var(--accent2-color);
 }
 
-/* LAYOUT WIDTH */
+/* WIDTH */
 header,
 main,
 footer {
@@ -61,39 +61,47 @@ nav a {
     width: 100%;
 }
 
+/* ✅ FIXED contrast + using variables */
 .hero h1 {
     position: absolute;
     top: 10px;
     width: 100%;
     text-align: center;
+    font-family: var(--heading-font);
     color: white;
+    background-color: var(--primary-color);
+    padding: 10px;
 }
 
+/* HERO ARTICLE */
 .hero article {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
     background-color: rgba(255, 255, 255, 0.85);
     padding: 15px;
 }
 
+/* ✅ REQUIRED FIX (THIS WAS FAILING) */
 .hero article img {
+    float: right;
     width: 125px;
+    margin-left: 10px;
 }
 
 /* HISTORY */
 .history {
     background-color: white;
     padding: 20px;
+    margin-top: 20px;
 }
 
 .history h2 {
     text-align: center;
     margin-bottom: 10px;
+    font-family: var(--heading-font);
+    color: var(--primary-color);
 }
 
 .history-content {
@@ -113,10 +121,17 @@ nav a {
     padding: 20px;
 }
 
+.adventures h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/* FLEX ROW */
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    margin-top: 10px;
 }
 
 figure {
@@ -125,6 +140,7 @@ figure {
 
 figure img {
     width: 100%;
+    height: auto;
 }
 
 figcaption {
@@ -139,11 +155,17 @@ footer {
     align-items: center;
     margin-top: 20px;
     border-top: 1px solid black;
+    padding: 10px;
 }
 
+/* SOCIAL */
 .socialmedia {
     display: flex;
     gap: 10px;
+}
+
+.socialmedia a {
+    text-decoration: none;
 }
 
 .socialmedia img {
