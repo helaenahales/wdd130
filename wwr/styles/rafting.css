@@ -173,3 +173,67 @@ footer {
 .socialmedia img {
     width: 30px;
 }
+
+/* ========================= */
+/* CONTACT PAGE ONLY STYLES  */
+/* ========================= */
+
+.contact-page h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.contact-page .contact-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Map + Form layout */
+.contact-page .map,
+.contact-page .contact-form {
+    width: 48%;
+}
+
+.contact-page .map {
+    float: left;
+}
+
+.contact-page .contact-form {
+    float: right;
+}
+
+.contact-page .map iframe {
+    width: 100%;
+    height: 300px;
+}
+
+/* Clear floats */
+.contact-page::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Employees section */
+.contact-page .employees {
+    clear: both;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-page .employees figure {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+}
+
+.contact-page .employees img {
+    width: 100%;
+}
+
+/* Form spacing */
+.contact-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
