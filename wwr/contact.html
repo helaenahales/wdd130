@@ -1,115 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Contact Us | Idaho River Adventures</title>
-
     <meta name="description"
       content="Contact Idaho River Adventures for rafting questions, reservations, and trip information. We are here to help you plan your Salmon River adventure.">
-
+    <meta name="author" content="Helaena Hales">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
 
-    <!-- HEADER (keep same as about page) -->
     <header>
         <img src="images/logo.png" alt="Idaho River Adventures Logo">
+
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
             <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
     <main>
 
-        <h1>Contact Us</h1>
+        <h1>Contact Idaho River Adventures</h1>
 
-        <!-- COMPANY INFO -->
+        <!-- CONTACT INFO -->
         <section>
-            <h2>Company Information</h2>
-
+            <h2>Contact Information</h2>
             <p><strong>Address:</strong> 123 River Road, Salmon, Idaho</p>
             <p><strong>Phone:</strong> (208) 555-1234</p>
             <p><strong>Email:</strong> info@idahoriveradventures.com</p>
 
-            <!-- GOOGLE MAP -->
-            <div class="map-container">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d720405.996428507!2d-115.117421521875!3d45.14485580000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5358369e194f3415%3A0x9ad899d4e848e3ed!2sIdaho%20River%20Adventures%20%7C%20Salmon%20River%20Rafting!5e0!3m2!1sen!2sus!4v1775337227211!5m2!1sen!2sus"
-                  width="600" height="450" allowfullscreen="" loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
+            <!-- GOOGLE MAP (no inline style) -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d720405.996428507!2d-115.117421521875!3d45.14485580000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5358369e194f3415%3A0x9ad899d4e848e3ed!2sIdaho%20River%20Adventures%20%7C%20Salmon%20River%20Rafting!5e0!3m2!1sen!2sus!4v1775337227211!5m2!1sen!2sus"
+              width="600" height="300" loading="lazy">
+            </iframe>
         </section>
 
         <!-- EMPLOYEES -->
         <section>
-            <h2>Our Team</h2>
+            <h2>Meet Our Team</h2>
 
             <figure>
                 <img src="images/employee1.jpg" alt="River guide smiling">
-                <figcaption>Alex - Lead River Guide</figcaption>
+                <figcaption>Lead River Guide</figcaption>
             </figure>
 
             <figure>
                 <img src="images/employee2.jpg" alt="Safety instructor on raft">
-                <figcaption>Jordan - Safety Instructor</figcaption>
+                <figcaption>Safety Instructor</figcaption>
             </figure>
 
             <figure>
                 <img src="images/employee3.jpg" alt="Customer service representative">
-                <figcaption>Taylor - Customer Support</figcaption>
+                <figcaption>Customer Support</figcaption>
             </figure>
         </section>
 
-        <!-- CONTACT FORM -->
+        <!-- FORM -->
         <section>
             <h2>Send Us a Message</h2>
 
             <form>
 
-                <!-- NAME -->
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name">
 
-                <!-- EMAIL -->
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email">
 
-                <!-- PURPOSE -->
                 <p>Purpose of Message:</p>
 
-                <label>
-                    <input type="radio" name="purpose" value="inquiry" required>
-                    General Inquiry
-                </label>
+                <input type="radio" id="general" name="purpose" value="general">
+                <label for="general">General Inquiry</label>
 
-                <label>
-                    <input type="radio" name="purpose" value="reservation">
-                    Reservation Question
-                </label>
+                <input type="radio" id="reservation" name="purpose" value="reservation">
+                <label for="reservation">Reservation Question</label>
 
-                <label>
-                    <input type="radio" name="purpose" value="suggestion">
-                    Website Suggestion
-                </label>
+                <input type="radio" id="suggestion" name="purpose" value="suggestion">
+                <label for="suggestion">Website Suggestion</label>
 
-                <!-- MESSAGE -->
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <textarea id="message" name="message"></textarea>
 
-                <!-- NEWSLETTER -->
-                <label>
-                    <input type="checkbox" name="newsletter">
-                    Please subscribe me to the monthly newsletter
-                </label>
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Please subscribe me to the monthly newsletter</label>
 
-                <!-- SUBMIT -->
                 <button type="submit">Send Message</button>
 
             </form>
@@ -117,9 +98,20 @@
 
     </main>
 
-    <!-- FOOTER (keep same as about page) -->
     <footer>
-        <p>&copy; 2026 Idaho River Adventures | All Rights Reserved</p>
+        <p>© 2026 Idaho River Adventures | Helaena Hales</p>
+
+        <nav class="socialmedia">
+            <a href="#">
+                <img src="images/facebook.png" alt="Facebook icon">
+            </a>
+            <a href="#">
+                <img src="images/twitter.png" alt="Twitter icon">
+            </a>
+            <a href="#">
+                <img src="images/instagram.png" alt="Instagram icon">
+            </a>
+        </nav>
     </footer>
 
 </body>
