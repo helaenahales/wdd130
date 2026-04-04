@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Idaho River Adventures</title>
+    <title>Contact Us | White Water Rafting Co.</title>
     <meta name="description"
-      content="Contact Idaho River Adventures for rafting questions, reservations, and trip information. We are here to help you plan your Salmon River adventure.">
+      content="Contact White Water Rafting Co. for rafting questions, reservations, and trip information. We are here to help you plan your adventure.">
     <meta name="author" content="Helaena Hales">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
@@ -14,8 +14,7 @@
 <body>
 
     <header>
-        <img src="images/logo.png" alt="Idaho River Adventures Logo">
-
+        <img src="images/logo.png" alt="Rafting Company Logo">
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -26,29 +25,32 @@
 
     <main>
 
-        <h1>Contact Idaho River Adventures</h1>
+        <h1>Contact White Water Rafting Co.</h1>
 
         <!-- CONTACT INFO -->
-        <section>
+        <section class="contact-info">
             <h2>Contact Information</h2>
             <p><strong>Address:</strong> 123 River Road, Salmon, Idaho</p>
             <p><strong>Phone:</strong> (208) 555-1234</p>
-            <p><strong>Email:</strong> info@idahoriveradventures.com</p>
+            <p><strong>Email:</strong> info@whitewaterraftingco.com</p>
+        </section>
 
-            <!-- GOOGLE MAP (no inline style) -->
+        <!-- GOOGLE MAP -->
+        <section class="map">
+            <h2>Find Us</h2>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d720405.996428507!2d-115.117421521875!3d45.14485580000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5358369e194f3415%3A0x9ad899d4e848e3ed!2sIdaho%20River%20Adventures%20%7C%20Salmon%20River%20Rafting!5e0!3m2!1sen!2sus!4v1775337227211!5m2!1sen!2sus"
-              width="600" height="300" loading="lazy">
+              width="600" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </section>
 
         <!-- EMPLOYEES -->
-        <section>
+        <section class="employees">
             <h2>Meet Our Team</h2>
 
             <figure>
                 <img src="images/employee1.jpg" alt="River guide smiling">
-                <figcaption>Lead River Guide</figcaption>
+                <figcaption>River Guide</figcaption>
             </figure>
 
             <figure>
@@ -62,55 +64,60 @@
             </figure>
         </section>
 
-        <!-- FORM -->
-        <section>
+        <!-- CONTACT FORM -->
+        <section class="contact-form">
             <h2>Send Us a Message</h2>
 
             <form>
-
-                <label for="name">Name:</label>
+                <!-- NAME -->
+                <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name">
 
-                <label for="email">Email:</label>
+                <!-- EMAIL -->
+                <label for="email">Your Email:</label>
                 <input type="email" id="email" name="email">
 
+                <!-- PURPOSE -->
                 <p>Purpose of Message:</p>
 
-                <input type="radio" id="general" name="purpose" value="general">
-                <label for="general">General Inquiry</label>
+                <label for="general">
+                    <input type="radio" id="general" name="purpose" value="general">
+                    General Inquiry
+                </label>
 
-                <input type="radio" id="reservation" name="purpose" value="reservation">
-                <label for="reservation">Reservation Question</label>
+                <label for="reservation">
+                    <input type="radio" id="reservation" name="purpose" value="reservation">
+                    Reservation Question
+                </label>
 
-                <input type="radio" id="suggestion" name="purpose" value="suggestion">
-                <label for="suggestion">Website Suggestion</label>
+                <label for="suggestion">
+                    <input type="radio" id="suggestion" name="purpose" value="suggestion">
+                    Website Suggestion
+                </label>
 
-                <label for="message">Message:</label>
+                <!-- MESSAGE -->
+                <label for="message">Your Message:</label>
                 <textarea id="message" name="message"></textarea>
 
-                <input type="checkbox" id="newsletter" name="newsletter">
-                <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                <!-- NEWSLETTER -->
+                <label for="subscribe">
+                    <input type="checkbox" id="subscribe" name="subscribe">
+                    Please subscribe me to the monthly newsletter
+                </label>
 
+                <!-- SUBMIT -->
                 <button type="submit">Send Message</button>
-
             </form>
         </section>
 
     </main>
 
     <footer>
-        <p>© 2026 Idaho River Adventures | Helaena Hales</p>
-
+        <p>© 2026 White Water Rafting Co. | Helaena Hales</p>
         <nav class="socialmedia">
-            <a href="#">
-                <img src="images/facebook.png" alt="Facebook icon">
-            </a>
-            <a href="#">
-                <img src="images/twitter.png" alt="Twitter icon">
-            </a>
-            <a href="#">
-                <img src="images/instagram.png" alt="Instagram icon">
-            </a>
+            <a href="#"><img src="images/facebook.png" alt="Facebook icon"></a>
+            <a href="#"><img src="images/twitter.png" alt="Twitter icon"></a>
+            <a href="#"><img src="images/instagram.png" alt="Instagram icon"></a>
         </nav>
     </footer>
 
