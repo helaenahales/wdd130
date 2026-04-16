@@ -376,3 +376,15 @@ footer p {
 img {
     max-width: 100%;
 }
+
+/* ========================= */
+/* ABOUT PAGE HERO FIX (SAFE) */
+/* ========================= */
+
+.hero article img {
+    float: right;
+    width: 125px;
+    height: auto;
+    margin-left: 10px;
+    display: block;
+}
