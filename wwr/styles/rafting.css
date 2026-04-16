@@ -65,7 +65,7 @@ nav a {
 }
 
 /* ========================= */
-/* HERO (FIXED PROPERLY) */
+/* HERO */
 /* ========================= */
 
 .hero {
@@ -88,7 +88,6 @@ nav a {
     padding: 10px;
 }
 
-/* THIS is the correct overlay layout */
 .hero article {
     position: absolute;
     bottom: 20px;
@@ -103,11 +102,12 @@ nav a {
     gap: 15px;
 }
 
-/* FIXED IMAGE INSIDE HERO ARTICLE */
+/* ✅ FIXED IMAGE (stays right, no float breaking layout) */
 .hero article img {
     width: 125px;
     height: auto;
     flex-shrink: 0;
+    margin-left: auto;
     display: block;
 }
 
@@ -377,14 +377,44 @@ img {
     max-width: 100%;
 }
 
-/* ========================= */
-/* ABOUT PAGE HERO FIX (SAFE) */
-/* ========================= */
+/* HOVER EFFECTS */
+nav a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    transition: 0.2s ease;
+}
 
-.hero article img {
-    float: right;
-    width: 125px;
-    height: auto;
-    margin-left: 10px;
-    display: block;
+.cta a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.2s ease;
+}
+
+.cta a:hover {
+    background-color: var(--accent1-color);
+}
+
+.grid-item {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+}
+
+.trip-table td {
+    background-color: white;
 }
