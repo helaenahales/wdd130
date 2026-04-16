@@ -20,9 +20,10 @@ body {
     font-family: var(--body-font);
     color: var(--accent1-color);
     background-color: var(--accent2-color);
+    line-height: 1.5;
 }
 
-/* WIDTH */
+/* PAGE WIDTH */
 header,
 main,
 footer {
@@ -30,7 +31,15 @@ footer {
     margin: 0 auto;
 }
 
+/* MAIN */
+main {
+    padding: 10px 0;
+}
+
+/* ========================= */
 /* HEADER */
+/* ========================= */
+
 header {
     display: grid;
     grid-template-columns: 150px 1fr;
@@ -39,7 +48,7 @@ header {
     margin-top: 10px;
 }
 
-/* NAV (NOW CENTERED) */
+/* NAV */
 nav {
     display: flex;
     justify-content: center;
@@ -55,13 +64,17 @@ nav a {
     padding: 10px;
 }
 
-/* HERO */
+/* ========================= */
+/* HERO (FIXED PROPERLY) */
+/* ========================= */
+
 .hero {
     position: relative;
 }
 
 .hero img {
     width: 100%;
+    display: block;
 }
 
 .hero h1 {
@@ -75,23 +88,33 @@ nav a {
     padding: 10px;
 }
 
-/* HERO ARTICLE */
+/* THIS is the correct overlay layout */
 .hero article {
     position: absolute;
     bottom: 20px;
     left: 20px;
     right: 20px;
+
     background-color: rgba(255, 255, 255, 0.85);
     padding: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
+/* FIXED IMAGE INSIDE HERO ARTICLE */
 .hero article img {
-    float: right;
     width: 125px;
-    margin-left: 10px;
+    height: auto;
+    flex-shrink: 0;
+    display: block;
 }
 
+/* ========================= */
 /* HISTORY */
+/* ========================= */
+
 .history {
     background-color: white;
     padding: 20px;
@@ -116,18 +139,15 @@ nav a {
     width: 100%;
 }
 
+/* ========================= */
 /* ADVENTURES */
+/* ========================= */
+
 .adventures {
     text-align: center;
     padding: 20px;
 }
 
-.adventures h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
-
-/* FLEX ROW */
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
@@ -141,25 +161,21 @@ figure {
 
 figure img {
     width: 100%;
-    height: auto;
+    display: block;
 }
 
-figcaption {
-    margin-top: 5px;
-    font-size: 0.9rem;
-}
+/* ========================= */
+/* FOOTER */
+/* ========================= */
 
-/* FOOTER (FIXED CENTER TEXT) */
 footer {
     display: flex;
     justify-content: flex-end;
-    /* icons stay right */
     align-items: center;
     margin-top: 30px;
     border: 1px solid black;
     padding: 10px;
     position: relative;
-    /* needed for centering */
 }
 
 footer p {
@@ -175,16 +191,13 @@ footer p {
     gap: 10px;
 }
 
-.socialmedia a {
-    text-decoration: none;
-}
-
 .socialmedia img {
     width: 30px;
+    height: auto;
 }
 
 /* ========================= */
-/* CONTACT PAGE ONLY STYLES  */
+/* CONTACT PAGE */
 /* ========================= */
 
 .contact-page h1 {
@@ -197,7 +210,6 @@ footer p {
     margin-bottom: 20px;
 }
 
-/* Map + Form */
 .contact-page .map,
 .contact-page .contact-form {
     width: 48%;
@@ -216,21 +228,18 @@ footer p {
     height: 300px;
 }
 
-/* Clear floats */
 .contact-page::after {
     content: "";
     display: block;
     clear: both;
 }
 
-/* FORM spacing */
 .contact-page form {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-/* EMPLOYEE SECTION */
 .contact-page .employees {
     clear: both;
     text-align: center;
@@ -240,7 +249,6 @@ footer p {
     background-color: white;
 }
 
-/* Smaller images */
 .contact-page .employees figure {
     display: inline-block;
     width: 20%;
@@ -251,59 +259,13 @@ footer p {
     width: 100%;
 }
 
-/* ========================= /
-/ HOME PAGE STYLES /
-/ ========================= */
-.cta {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-    color: white;
-    text-decoration: none;
-    margin-top: 10px;
-}
-
-.newsletter {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.newsletter form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-}
-
-.home-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin: 20px 0;
-}
-
-.home-grid img {
-    width: 100%;
-}
-
 /* ========================= */
-/* HOME PAGE STYLES          */
+/* HOME PAGE */
 /* ========================= */
 
-/* CTA */
 .cta {
     text-align: center;
     margin: 30px 0;
-}
-
-.cta h2 {
-    font-family: var(--heading-font);
-    margin-bottom: 10px;
 }
 
 .cta a {
@@ -314,7 +276,6 @@ footer p {
     font-weight: bold;
 }
 
-/* NEWSLETTER */
 .newsletter {
     text-align: center;
     margin: 30px 0;
@@ -327,7 +288,6 @@ footer p {
     margin-top: 10px;
 }
 
-/* GRID LAYOUT */
 .home-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -344,11 +304,75 @@ footer p {
 
 .grid-item img {
     width: 100%;
-    height: auto;
+    display: block;
 }
 
-/* FIX HUGE SOCIAL ICONS */
-.socialmedia img {
-    width: 30px;
-    /* keeps them normal */
+/* ========================= */
+/* TRIPS PAGE */
+/* ========================= */
+
+.trips-page h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.trips-page .cta {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.trips {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.trip {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid black;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trip:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.trip img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.trip-table {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.trip-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.trip-table th,
+.trip-table td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.trip-table th {
+    background-color: var(--secondary-color);
+}
+
+/* GLOBAL FIX */
+img {
+    max-width: 100%;
 }
